@@ -1,0 +1,37 @@
+&.hidden::before,
+&.hidden::after {
+background-color: #e8c300;
+}
+&::before,
+&::after {
+content: "";
+width: 10px;
+height: 1px;
+background-color: black;
+position: absolute;
+top: 12px;
+right: 0px;
+// margin-left: 100%;
+}
+&::before {
+transform: rotate(40deg);
+transition: 0.3s all ease 0s;
+left: 20px;
+}
+&::after {
+transform: rotate(-40deg);
+transition: 0.3s all ease 0s;
+left: 28px;
+&.hidden {
+transform: rotate(40deg);
+transition: 0.3s all ease 0s;
+}
+}
+&.hidden::before {
+transform: rotate(-40deg);
+transition: 0.3s all ease 0s;
+}
+&.hidden::after {
+transform: rotate(40deg);
+transition: 0.3s all ease 0s;
+}

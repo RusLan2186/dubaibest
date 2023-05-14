@@ -1143,6 +1143,11 @@ body.lock {
 .swiper-button-prev {
    span {
       color: $white;
+      transition: 0.3s all;
+      &:hover {
+         color: $yellow;
+         transition: 0.3s all;
+      }
    }
    &:after {
       display: none;
@@ -1164,6 +1169,11 @@ body.lock {
    }
    span {
       color: $white;
+      transition: 0.3s all;
+      &:hover {
+         color: $yellow;
+         transition: 0.3s all;
+      }
    }
 }
 .swiper-button-next {

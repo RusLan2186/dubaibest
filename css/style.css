@@ -1317,6 +1317,11 @@ body {
 
 .swiper-button-prev span {
   color: #ffffff;
+  transition: 0.3s all;
+}
+.swiper-button-prev span:hover {
+  color: #fcd54c;
+  transition: 0.3s all;
 }
 .swiper-button-prev:after {
   display: none;
@@ -1339,6 +1344,11 @@ body {
 }
 .header__slider__next span {
   color: #ffffff;
+  transition: 0.3s all;
+}
+.header__slider__next span:hover {
+  color: #fcd54c;
+  transition: 0.3s all;
 }
 
 .swiper-button-next:after {

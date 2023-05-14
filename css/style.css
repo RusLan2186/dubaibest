@@ -678,8 +678,8 @@ body {
 }
 @media (max-width: 767.98px) {
   .menu__arrow {
-    left: 4.6875rem;
-    top: 1.125rem;
+    left: 4.375rem;
+    top: 1.0625rem;
     padding: 0 10px;
   }
 }

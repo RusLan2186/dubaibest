@@ -65,7 +65,7 @@ new Swiper('.header__slider', {
       prevEl: '.header__slider__prev'
    },
    nested: true,
-   speed: 700,
+   speed: 600,
    // loop: true,
 });
 
@@ -74,7 +74,7 @@ new Swiper('.projects__slider', {
    // slidesPerView: 4,
    autowidth: true,
    nested: true,
-   speed: 700,
+   speed: 600,
    // loop: true,
    pagination: {
       el: '.projects__slider-pagination',
@@ -109,7 +109,7 @@ new Swiper('.articles__slider', {
    slidesPerView: 3,
    autowidth: true,
    nested: true,
-   speed: 700,
+   speed: 600,
    // loop: true,
    pagination: {
       el: '.articles__slider-pagination',

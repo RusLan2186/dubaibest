@@ -679,7 +679,7 @@ body {
 @media (max-width: 767.98px) {
   .menu__arrow {
     left: 4.6875rem;
-    top: 1.25rem;
+    top: 1.125rem;
     padding: 0 10px;
   }
 }
@@ -1400,7 +1400,7 @@ body {
 }
 .projects__tabs_block--active1 {
   display: block;
-  animation: 1.3s slide-in-top;
+  animation: 1s scale-up-center;
 }
 
 .projects__wrapper {

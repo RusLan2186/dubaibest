@@ -245,7 +245,7 @@ body.lock {
 
 @-webkit-keyframes scale-up-center {
    0% {
-      -webkit-transform: scale(0.5);
+      -webkit-transform: scale(0.8);
       transform: scale(0.8);
    }
    100% {
@@ -609,7 +609,7 @@ body.lock {
    right: rem(-15);
    @media (max-width: 767.98px) {
       left: rem(75);
-      top: rem(20);
+      top: rem(18);
       padding: 0 10px;
    }
    &._active {
@@ -1224,8 +1224,11 @@ body.lock {
    display: none;
    &--active1 {
       display: block;
-      animation: 1.3s slide-in-top;
+      animation: 1s scale-up-center;
    }
+}
+
+.three {
 }
 .projects-block {
 }

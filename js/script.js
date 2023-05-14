@@ -65,7 +65,7 @@ new Swiper('.header__slider', {
       prevEl: '.header__slider__prev'
    },
    nested: true,
-   speed: 800,
+   speed: 700,
    // loop: true,
 });
 
@@ -74,7 +74,7 @@ new Swiper('.projects__slider', {
    // slidesPerView: 4,
    autowidth: true,
    nested: true,
-   speed: 800,
+   speed: 700,
    // loop: true,
    pagination: {
       el: '.projects__slider-pagination',
@@ -109,7 +109,7 @@ new Swiper('.articles__slider', {
    slidesPerView: 3,
    autowidth: true,
    nested: true,
-   speed: 800,
+   speed: 700,
    // loop: true,
    pagination: {
       el: '.articles__slider-pagination',
@@ -209,7 +209,7 @@ $(document).ready(function () {
          // блок который идет сразу после ссылки
          $('.spoiler-faq__block').not($(this).next()).slideUp(300);
       }
-      $(this).toggleClass('hidden').next().slideToggle(600);
+      $(this).toggleClass('hidden').next().slideToggle(400);
    });
 });
 
@@ -224,7 +224,7 @@ $(document).ready(function () {
          // блок который идет сразу после ссылки
          $('.footer-spoiler__block').not($(this).next()).slideUp(300);
       }
-      $(this).toggleClass('hidden').next().slideToggle(600);
+      $(this).toggleClass('hidden').next().slideToggle(400);
    });
 });
 

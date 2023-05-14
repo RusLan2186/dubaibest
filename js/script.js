@@ -51,7 +51,9 @@ function mainMenu(event) {
       list.classList.remove('_active');
       arrow.classList.remove('_active');
       link.classList.remove('_active');
+      link.style.transition = '0.3s';
    }
+
 }
 // ............................sliders...........................
 
@@ -225,3 +227,5 @@ $(document).ready(function () {
       $(this).toggleClass('hidden').next().slideToggle(600);
    });
 });
+
+

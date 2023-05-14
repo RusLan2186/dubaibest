@@ -218,15 +218,22 @@ body.lock {
    z-index: 20;
    opacity: 0.7;
    transition: 0.3s all ease 0s;
+   @media (max-width: 991.98px) {
+      bottom: rem(-50);
+   }
    @media (max-width: 767.98px) {
       display: none;
    }
    &.back {
       bottom: 80px;
+      @media (max-width: 991.98px) {
+         bottom: rem(30);
+      }
    }
    &:hover {
       opacity: 1;
       transition: 0.3s all ease 0s;
+      background-color: #d6ac12;
    }
 }
 
@@ -586,10 +593,11 @@ body.lock {
 .menu__link-sub {
    position: relative;
    display: inline-block;
-   transition: 0.5s all ease 0s;
+   margin-bottom: rem(-10);
+   transition: 0.5s margin-bottom;
    &._active {
       @media (max-width: 767.98px) {
-         transition: 0.5s all ease 0s;
+         transition: 0.5s margin-bottom ease 0s;
          margin-bottom: rem(100);
       }
    }
@@ -646,7 +654,7 @@ body.lock {
    background-color: #272727;
    @media (max-width: 767.98px) {
       border: none;
-      padding-top: rem(30);
+      padding-top: rem(20);
       margin-left: rem(15);
    }
    &._active {
@@ -657,7 +665,7 @@ body.lock {
 }
 .sub-menu__list._active .menu__link-sub {
    @media (max-width: 767.98px) {
-      margin-bottom: 80px;
+      // margin-bottom: 80px;
    }
 }
 
@@ -1555,6 +1563,9 @@ span.swiper-pagination-bullet {
       background: url(../img/icons/snape__grey.svg) right no-repeat;
       width: 100%;
       height: 100%;
+      @media (max-width: 767.98px) {
+         right: rem(-15);
+      }
    }
 
    &:hover:after {
@@ -1690,6 +1701,10 @@ span.swiper-pagination-bullet {
       background: url(../img/icons/snape__grey.svg) no-repeat;
       width: 100%;
       height: 100%;
+      @media (max-width: 767.98px) {
+         top: rem(4);
+         right: rem(-100);
+      }
    }
    &:hover {
       color: $yellow;
@@ -1816,6 +1831,7 @@ span.swiper-pagination-bullet {
    display: block;
    margin-right: 30px;
    transition: 0.5s all ease 0s;
+   cursor: pointer;
    &:after {
       content: "";
       position: absolute;
@@ -1846,6 +1862,7 @@ span.swiper-pagination-bullet {
 .spoiler-faq__block {
    margin-top: rem(33);
    margin-bottom: rem(20);
+   display: none;
 }
 .spoiler-faq__text {
    font-size: rem(14);
@@ -1979,6 +1996,7 @@ span.swiper-pagination-bullet {
       display: block;
       padding-bottom: rem(15);
       position: relative;
+      cursor: pointer;
       &:after {
          content: "";
          position: absolute;
@@ -2004,6 +2022,7 @@ span.swiper-pagination-bullet {
 .footer-spoiler__block {
    @media (max-width: 767.98px) {
       position: relative;
+      display: none;
    }
 }
 .top-footer__list {

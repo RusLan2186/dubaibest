@@ -260,6 +260,11 @@ body {
   opacity: 0.7;
   transition: 0.3s all ease 0s;
 }
+@media (max-width: 991.98px) {
+  .back-to-top {
+    bottom: -3.125rem;
+  }
+}
 @media (max-width: 767.98px) {
   .back-to-top {
     display: none;
@@ -268,9 +273,15 @@ body {
 .back-to-top.back {
   bottom: 80px;
 }
+@media (max-width: 991.98px) {
+  .back-to-top.back {
+    bottom: 1.875rem;
+  }
+}
 .back-to-top:hover {
   opacity: 1;
   transition: 0.3s all ease 0s;
+  background-color: #d6ac12;
 }
 
 .scale-up-center {
@@ -650,11 +661,12 @@ body {
 .menu__link-sub {
   position: relative;
   display: inline-block;
-  transition: 0.5s all ease 0s;
+  margin-bottom: -0.625rem;
+  transition: 0.5s margin-bottom;
 }
 @media (max-width: 767.98px) {
   .menu__link-sub._active {
-    transition: 0.5s all ease 0s;
+    transition: 0.5s margin-bottom ease 0s;
     margin-bottom: 6.25rem;
   }
 }
@@ -718,7 +730,7 @@ body {
 @media (max-width: 767.98px) {
   .sub-menu__list {
     border: none;
-    padding-top: 1.875rem;
+    padding-top: 1.25rem;
     margin-left: 0.9375rem;
   }
 }
@@ -726,12 +738,6 @@ body {
   opacity: 1;
   visibility: visible;
   transition: 0.5s all ease 0s;
-}
-
-@media (max-width: 767.98px) {
-  .sub-menu__list._active .menu__link-sub {
-    margin-bottom: 80px;
-  }
 }
 
 .sub-menu__link {
@@ -1794,6 +1800,11 @@ span.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 767.98px) {
+  .articles__link:after {
+    right: -0.9375rem;
+  }
+}
 .articles__link:hover:after {
   display: none;
   transition: 0.5s color;
@@ -2004,6 +2015,12 @@ span.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 767.98px) {
+  .hover-articles__link:after {
+    top: 0.25rem;
+    right: -6.25rem;
+  }
+}
 .hover-articles__link:hover {
   color: #fcd54c;
   transition: 0.5s color;
@@ -2124,6 +2141,7 @@ span.swiper-pagination-bullet {
   display: block;
   margin-right: 30px;
   transition: 0.5s all ease 0s;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .spoiler-faq__link {
@@ -2169,6 +2187,7 @@ span.swiper-pagination-bullet {
 .spoiler-faq__block {
   margin-top: 2.0625rem;
   margin-bottom: 1.25rem;
+  display: none;
 }
 
 .spoiler-faq__text {
@@ -2309,6 +2328,7 @@ span.swiper-pagination-bullet {
     display: block;
     padding-bottom: 0.9375rem;
     position: relative;
+    cursor: pointer;
   }
   .top-spoiler__link:after {
     content: "";
@@ -2334,6 +2354,7 @@ span.swiper-pagination-bullet {
 @media (max-width: 767.98px) {
   .footer-spoiler__block {
     position: relative;
+    display: none;
   }
 }
 

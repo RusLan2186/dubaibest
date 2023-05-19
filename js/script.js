@@ -39,6 +39,7 @@ $(window).scroll(function () { // Отслеживаем начало прокр
 const link = document.querySelector('.menu__link-sub');
 const list = document.querySelector('.sub-menu__list');
 const arrow = document.querySelector('.menu__arrow');
+const body = document.body;
 
 document.addEventListener('click', mainMenu);
 function mainMenu(event) {
@@ -49,6 +50,7 @@ function mainMenu(event) {
    }
    if (!event.target.closest('.menu__item1')) {
       list.classList.remove('_active');
+      body.classList.remove('lock');
       arrow.classList.remove('_active');
       link.classList.remove('_active');
       link.style.transition = '0.3s';
@@ -173,7 +175,7 @@ const closeArea = document.querySelector('.popup__area');
 const wrapper = document.querySelector('.wrapper');
 const menuList = document.querySelector('#list');
 
-// headerSubtitle.addEventListener('click', OpenPopup);
+headerSubtitle.addEventListener('click', OpenPopup);
 headerSubtitleTwo.addEventListener('click', OpenPopup);
 headerSubtitleThree.addEventListener('click', OpenPopup);
 headerButton.addEventListener('click', OpenPopup);

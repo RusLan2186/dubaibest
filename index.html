@@ -23,17 +23,18 @@
             </div>
             <nav class="header__menu menu">
                <ul id="list" class="menu__list">
-                  <li class="menu__item menu__item1"> <a class="menu__link menu__link-sub" href="#">buy</a>
+                  <li class="menu__item menu__item-sub"> <a class="menu__link menu__link-sub" href="#">menu</a>
                      <span class="menu__arrow"><img src="img/icons/snape_menu.svg" alt="snape"></span>
                      <ul class="sub-menu__list">
-                        <li> <a href="#" class="sub-menu__link">Category number one </a></li>
-                        <li> <a href="#" class="sub-menu__link">Apartments in Dubai</a></li>
-                        <li> <a href="#" class="sub-menu__link">Category number twenty five</a></li>
+                        <li> <a href="#projects" class="sub-menu__link">Projects </a></li>
+                        <li> <a href="#contact" class="sub-menu__link">Contact </a></li>
+                        <li> <a href="#articles" class="sub-menu__link">Articles</a></li>
+                        <li> <a href="#faq" class="sub-menu__link">FAQ </a></li>
                      </ul>
                   </li>
-                  <li class="menu__item"> <a class="menu__link" href="#">blog</a> </li>
+                  <li class="menu__item"> <a class="menu__link" href="blog.html">blog</a> </li>
                   <li class="menu__item"> <a class="menu__link" href="about.html">about</a> </li>
-                  <li class="menu__item"> <a class="menu__link" href="#">contact</a> </li>
+                  <li class="menu__item"> <a class="menu__link" href="contact.html">contact</a> </li>
                </ul>
                <a href="#my_popup" class="header__button header__button-hid">Book a consultation</a>
                <a href="tel:+7 (212) 674-25-10" class="header__number header__number-hid">+3 (212) 674-25-10</a>
@@ -286,7 +287,7 @@
                </div>
             </div>
          </section>
-         <section class="projects">
+         <section id="projects" class="projects">
             <div class="projects__container">
                <h2 class="projects__title title">Latest projects</h2>
                <div class="projects__tabs">
@@ -777,7 +778,7 @@
                </div>
             </div>
          </section>
-         <section class="contact">
+         <section id="contact" class="contact">
             <div class="contact__container">
                <div class="contact__wrapper">
                   <div class="contact__text">Do you have any questions?</div>
@@ -789,7 +790,7 @@
                </div>
             </div>
          </section>
-         <section class="articles">
+         <section id="articles" class="articles">
             <div class="articles__container">
                <div class="articles__header">
                   <h2 class="articles__title title">Useful articles</h2>
@@ -921,7 +922,7 @@
                <div class="articles__slider-pagination swiper-pagination"></div>
             </div>
          </section>
-         <section class="faq">
+         <section id="faq" class="faq">
             <div class="faq__container">
                <h2 class="faq__title title">FAQ</h2>
                <div class="faq__spoiler spoiler-faq one">
@@ -1083,7 +1084,7 @@
                            <li><a href="mailto:dubairealty@mail.com" class="top-footer__link">dubairealty@mail.com</a>
                            </li>
                         </ul>
-                        <a href="#" class="top-footer__button">Book a consultation</a>
+                        <a href="#" id="popup__open" class="top-footer__button">Book a consultation</a>
                      </nav>
                   </article>
                </div>

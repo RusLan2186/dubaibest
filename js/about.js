@@ -1,23 +1,67 @@
 // ................BURGER................................................
 
-$(document).ready(function () {
-   // на header burger вешаем событие клик
-   $('.header__burger').click(function (event) {
-      // при клике на бургер и хедер меню добавился класс aktive (нажали-добав класс, нажали-убрался класс) 
-      $('.header__burger, .header__menu,.menu__link-sub, header__language, header__number').toggleClass('open-menu');
-      // при открытом бургере блокируем прокрутку страницы
-      $('body').toggleClass('lock');
-   });
-});
+// $(document).ready(function () {
+//    // на header burger вешаем событие клик
+//    $('.header__burger').click(function (event) {
+//       // при клике на бургер и хедер меню добавился класс aktive (нажали-добав класс, нажали-убрался класс) 
+//       $('.header__burger, .header__menu,.menu__link-sub, header__language, header__number').toggleClass('open-menu');
+//       // при открытом бургере блокируем прокрутку страницы
+//       $('body').toggleClass('lock');
+//    });
+// });
 
-// закрытие бургера, при нажатии на меню
-const headerLinks = document.querySelectorAll('.header__menu')
-headerLinks.forEach((el) => {
-   el.addEventListener('click', () => {
-      // $('.header__burger,.header__menu').toggleClass('open-menu');
-      $('body').toggleClass('lock');
-   })
+// // закрытие бургера, при нажатии на меню
+// const headerLinks = document.querySelectorAll('.header__menu')
+// headerLinks.forEach((el) => {
+//    el.addEventListener('click', () => {
+//       $('.header__burger, .header__menu').toggleClass('open-menu');
+//       $('body').toggleClass('lock');
+//    })
+// })
+
+
+
+
+
+const link = document.querySelector('.menu__link-sub');
+const list = document.querySelector('.sub-menu__list');
+const arrow = document.querySelector('.menu__arrow');
+const body = document.body;
+const burger = document.querySelector('.header__burger');
+const headerMenu = document.querySelector('.header__menu');
+
+burger.addEventListener('click', function (event) {
+   burger.classList.toggle('open-menu');
+   headerMenu.classList.toggle('open-menu');
+   body.classList.toggle('lock');
 })
+
+document.addEventListener('click', mainMenu);
+function mainMenu(event) {
+   if (event.target.closest('.menu__link-sub')) {
+      list.classList.toggle('_active');
+      arrow.classList.toggle('_active');
+      link.classList.toggle('_active');
+      body.classList.add('lock');
+      burger.classList.add('open-menu');
+   }
+   if (!event.target.closest('.menu__item-sub')) {
+      list.classList.remove('_active');
+      arrow.classList.remove('_active');
+      link.classList.remove('_active');
+      link.style.transition = '0.3s';
+   }
+   if (event.target.closest('.sub-menu__link')) {
+      headerMenu.classList.remove('open-menu');
+      body.classList.remove('lock');
+      burger.classList.remove('open-menu');
+      list.classList.remove('_active');
+   }
+
+}
+
+
+
 
 // ........................................КНОПКА НАВЕРХ САЙТА.................................................
 
@@ -36,27 +80,44 @@ $(window).scroll(function () { // Отслеживаем начало прокр
 });
 
 
-const link = document.querySelector('.menu__link-sub');
-const list = document.querySelector('.sub-menu__list');
-const arrow = document.querySelector('.menu__arrow');
-const body = document.body;
+// замедленный скролл
 
-document.addEventListener('click', mainMenu);
-function mainMenu(event) {
-   if (event.target.closest('.menu__link-sub')) {
-      list.classList.toggle('_active');
-      arrow.classList.toggle('_active');
-      link.classList.toggle('_active');
-   }
-   if (!event.target.closest('.menu__item1')) {
-      list.classList.remove('_active');
-      body.classList.remove('lock');
-      arrow.classList.remove('_active');
-      link.classList.remove('_active');
-      link.style.transition = '0.3s';
-   }
+$(document).ready(function () {
+   $('.sub-menu__link').on('click', function (event) {
+      if ($(this).attr('hash') !== "") {
+         event.preventDefault();
+         let hash = $(this).prop('hash');
+         $('html, body').animate({
+            scrollTop: $(hash).offset().top
+         }, 800, function () {
+         });
+      }
+   });
+});
 
-}
+
+
+// const link = document.querySelector('.menu__link-sub');
+// const list = document.querySelector('.sub-menu__list');
+// const arrow = document.querySelector('.menu__arrow');
+// const body = document.body;
+
+// document.addEventListener('click', mainMenu);
+// function mainMenu(event) {
+//    if (event.target.closest('.menu__link-sub')) {
+//       list.classList.toggle('_active');
+//       arrow.classList.toggle('_active');
+//       link.classList.toggle('_active');
+//    }
+//    if (!event.target.closest('.menu__item1')) {
+//       list.classList.remove('_active');
+//       body.classList.remove('lock');
+//       arrow.classList.remove('_active');
+//       link.classList.remove('_active');
+//       link.style.transition = '0.3s';
+//    }
+
+// }
 
 const headerButton = document.querySelector('#popup__open');
 const headerButtonHid = document.querySelector('.header__button-hid');

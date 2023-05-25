@@ -1,28 +1,5 @@
 // ................BURGER................................................
 
-// $(document).ready(function () {
-//    // на header burger вешаем событие клик
-//    $('.header__burger').click(function (event) {
-//       // при клике на бургер и хедер меню добавился класс aktive (нажали-добав класс, нажали-убрался класс) 
-//       $('.header__burger, .header__menu,.menu__link-sub, header__language, header__number').toggleClass('open-menu');
-//       // при открытом бургере блокируем прокрутку страницы
-//       $('body').toggleClass('lock');
-//    });
-// });
-
-// // закрытие бургера, при нажатии на меню
-// const headerLinks = document.querySelectorAll('.header__menu')
-// headerLinks.forEach((el) => {
-//    el.addEventListener('click', () => {
-//       $('.header__burger, .header__menu').toggleClass('open-menu');
-//       $('body').toggleClass('lock');
-//    })
-// })
-
-
-
-
-
 const link = document.querySelector('.menu__link-sub');
 const list = document.querySelector('.sub-menu__list');
 const arrow = document.querySelector('.menu__arrow');
@@ -60,9 +37,6 @@ function mainMenu(event) {
 
 }
 
-
-
-
 // ........................................КНОПКА НАВЕРХ САЙТА.................................................
 
 $('.back-to-top').click(function () {
@@ -94,30 +68,6 @@ $(document).ready(function () {
       }
    });
 });
-
-
-
-// const link = document.querySelector('.menu__link-sub');
-// const list = document.querySelector('.sub-menu__list');
-// const arrow = document.querySelector('.menu__arrow');
-// const body = document.body;
-
-// document.addEventListener('click', mainMenu);
-// function mainMenu(event) {
-//    if (event.target.closest('.menu__link-sub')) {
-//       list.classList.toggle('_active');
-//       arrow.classList.toggle('_active');
-//       link.classList.toggle('_active');
-//    }
-//    if (!event.target.closest('.menu__item1')) {
-//       list.classList.remove('_active');
-//       body.classList.remove('lock');
-//       arrow.classList.remove('_active');
-//       link.classList.remove('_active');
-//       link.style.transition = '0.3s';
-//    }
-
-// }
 
 const headerButton = document.querySelector('#popup__open');
 const headerButtonHid = document.querySelector('.header__button-hid');

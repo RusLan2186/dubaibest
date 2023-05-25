@@ -516,6 +516,7 @@ body.lock {
 .header__menu.open-menu {
    left: 0;
    transition: all 0.8s ease 0s;
+   overflow: auto;
 }
 
 .menu {
@@ -529,9 +530,11 @@ body.lock {
       column-gap: rem(25);
    }
    @media (max-width: 767.98px) {
+      margin-top: rem(10);
       flex-direction: column;
    }
    @media (max-width: 650px) {
+      margin-top: rem(20);
       flex: 1 1 auto;
       justify-content: center;
       position: relative;
@@ -550,7 +553,7 @@ body.lock {
             height: 1px;
             background-color: #f1be06;
             position: absolute;
-            bottom: rem(-60);
+            bottom: rem(-30);
             left: 0;
          }
       }
@@ -604,7 +607,7 @@ body.lock {
    &._active {
       @media (max-width: 767.98px) {
          transition: 0.5s margin-bottom ease 0s;
-         margin-bottom: rem(150);
+         margin-bottom: rem(120);
       }
    }
 }
@@ -660,7 +663,7 @@ body.lock {
    background-color: #272727;
    @media (max-width: 767.98px) {
       border: none;
-      padding-top: rem(20);
+      padding-top: rem(10);
       margin-left: rem(15);
    }
    &._active {

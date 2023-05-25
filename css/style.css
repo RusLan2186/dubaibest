@@ -576,6 +576,7 @@ body {
 .header__menu.open-menu {
   left: 0;
   transition: all 0.8s ease 0s;
+  overflow: auto;
 }
 
 .menu__list {
@@ -593,11 +594,13 @@ body {
 }
 @media (max-width: 767.98px) {
   .menu__list {
+    margin-top: 0.625rem;
     flex-direction: column;
   }
 }
 @media (max-width: 650px) {
   .menu__list {
+    margin-top: 1.25rem;
     flex: 1 1 auto;
     justify-content: center;
     position: relative;
@@ -616,7 +619,7 @@ body {
     height: 1px;
     background-color: #f1be06;
     position: absolute;
-    bottom: -3.75rem;
+    bottom: -1.875rem;
     left: 0;
   }
 }
@@ -672,7 +675,7 @@ body {
 @media (max-width: 767.98px) {
   .menu__link-sub._active {
     transition: 0.5s margin-bottom ease 0s;
-    margin-bottom: 9.375rem;
+    margin-bottom: 7.5rem;
   }
 }
 
@@ -735,7 +738,7 @@ body {
 @media (max-width: 767.98px) {
   .sub-menu__list {
     border: none;
-    padding-top: 1.25rem;
+    padding-top: 0.625rem;
     margin-left: 0.9375rem;
   }
 }

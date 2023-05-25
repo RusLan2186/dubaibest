@@ -1,24 +1,3 @@
-// ................BURGER................................................
-
-// $(document).ready(function () {
-//    // на header burger вешаем событие клик
-//    $('.header__burger').click(function (event) {
-//       // при клике на бургер и хедер меню добавился класс aktive (нажали-добав класс, нажали-убрался класс) 
-//       $('.header__burger, .header__menu, header__language, header__number').toggleClass('open-menu');
-//       // при открытом бургере блокируем прокрутку страницы
-//       $('body').toggleClass('lock');
-//    });
-// });
-
-// закрытие бургера, при нажатии на меню
-// const headerLinks = document.querySelectorAll('.header__menu');
-// headerLinks.forEach((el) => {
-//    el.addEventListener('click', () => {
-//       $('.header__burger, header__link').toggleClass('open-menu');
-//       $('body').toggleClass('lock');
-//    })
-// })
-
 
 // .............................КНОПКА НАВЕРХ САЙТА.................................................
 
@@ -51,7 +30,7 @@ $(document).ready(function () {
    });
 });
 
-
+// burger & menu
 const link = document.querySelector('.menu__link-sub');
 const list = document.querySelector('.sub-menu__list');
 const arrow = document.querySelector('.menu__arrow');
